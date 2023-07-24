@@ -8,15 +8,20 @@ public class Weapon {
     private int durabillity;
     private String damangeType;
 
-    public Weapon(int damageOutput, int price, boolean isOneHanded, boolean singleOperator, int durabillity, String damangeType) {
+    public Weapon(int damageOutput, int price, int durabillity) {
+        super();
         this.damageOutput = damageOutput;
         this.price = price;
-        this.isOneHanded = isOneHanded;
-        this.singleOperator = singleOperator;
         this.durabillity = durabillity;
-        this.damangeType = damangeType;
     }
 
+    public Weapon(boolean isOneHanded,boolean singleOperator,String s1,int i, int i1,int i2){
+        this(i,i1,i2);
+        this.isOneHanded = isOneHanded;
+        this.singleOperator = singleOperator;
+        this.damangeType = s1;
+
+    }
     public int getDamageOutput() {
         return damageOutput;
     }
@@ -63,5 +68,10 @@ public class Weapon {
 
     public void setDamangeType(String damangeType) {
         this.damangeType = damangeType;
+    }
+
+    @override
+    public String toString(){
+        return "I do " + this.getDamangeType() + " My damage stat is " + this.getDamageOutput() + "My durabillity is " +this.getDurabillity();
     }
 }
