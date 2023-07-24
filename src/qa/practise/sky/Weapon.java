@@ -1,6 +1,7 @@
 package qa.practise.sky;
 
 public class Weapon {
+    private String name;
     private int damageOutput;
     private int price;
     private boolean isOneHanded;
@@ -15,11 +16,12 @@ public class Weapon {
         this.durabillity = durabillity;
     }
 
-    public Weapon(boolean isOneHanded,boolean singleOperator,String s1,int i, int i1,int i2){
+    public Weapon(boolean isOneHanded,boolean singleOperator,String s1,int i, int i1,int i2,String name){
         this(i,i1,i2);
         this.isOneHanded = isOneHanded;
         this.singleOperator = singleOperator;
         this.damangeType = s1;
+        this.name = name;
 
     }
     public int getDamageOutput() {
@@ -70,8 +72,8 @@ public class Weapon {
         this.damangeType = damangeType;
     }
 
-    @override
+    @Override
     public String toString(){
-        return "I do " + this.getDamangeType() + " My damage stat is " + this.getDamageOutput() + "My durabillity is " +this.getDurabillity();
+        return "I am " + name + " I do " + this.getDamangeType() + " My damage stat is " + this.getDamageOutput() + " My durabillity is " +this.getDurabillity();
     }
 }
