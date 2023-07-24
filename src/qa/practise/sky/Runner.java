@@ -20,5 +20,15 @@ public class Runner
         for (int i = 0; i < weaponList.length; i++) {
             System.out.println(weaponList[i]);
         }
+
+
+        StringBuilder builder = new StringBuilder(100);
+
+        builder.append("Hello ");
+        builder.append("world");
+        builder.append("!");
+
+        System.out.println(builder.toString());
+        System.out.println(builder.toString().equals("Hello world!"));
     }
 }
