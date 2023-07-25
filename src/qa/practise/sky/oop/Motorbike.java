@@ -16,4 +16,10 @@ public class Motorbike extends Vehicle{
     public void setHasSideCar(boolean hasSideCar) {
         this.hasSideCar = hasSideCar;
     }
+
+    @Override
+    public double bill(){
+        return this.getMonthlyExpenses() * 0.9 + this.getTopSpeed();
+    }
+
 }

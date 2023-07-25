@@ -15,4 +15,9 @@ public class Gokart extends Vehicle{
     public void setSpeedLimit(int speedLimit) {
         this.speedLimit = speedLimit;
     }
+
+    @Override
+    public double bill(){
+        return this.getMonthlyExpenses() * 1.7 + this.getTopSpeed();
+    }
 }

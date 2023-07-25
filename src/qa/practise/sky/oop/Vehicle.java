@@ -1,6 +1,6 @@
 package qa.practise.sky.oop;
 
-public class Vehicle {
+public abstract class Vehicle {
     private int topSpeed;
     private int numberOfWheels;
     private String modelName;
@@ -22,6 +22,10 @@ public class Vehicle {
         this.id = id;
     }
 
+    public Vehicle() {
+
+    }
+
     public int getMonthlyExpenses() {
         return monthlyExpenses;
     }
@@ -30,6 +34,10 @@ public class Vehicle {
         this.monthlyExpenses = monthlyExpenses;
     }
 
+    public double bill(){
+        return 0;
+
+    }
     public int getTopSpeed() {
         return topSpeed;
     }

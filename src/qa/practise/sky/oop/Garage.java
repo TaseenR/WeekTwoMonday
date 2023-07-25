@@ -22,15 +22,15 @@ public class Garage {
         vehicleList.add(v);
     }
 
-    public void removeByType(Vehicle model){
-        Class instance = model.getClass();
-        for(Vehicle v: vehicleList){
-
-            if(v.getClass() == instance){
-                vehicleList.remove(v);
-            }
-        }
-    }
+//    public void removeByType(Vehicle model){
+//        Class instance = model.getClass();
+//        for(Vehicle v: vehicleList){
+//
+//            if(v.getClass() == instance){
+//                vehicleList.remove(v);
+//            }
+//        }
+//    }
 
     public void removeById(int id){
         boolean found = false;
@@ -52,23 +52,14 @@ public class Garage {
         }
     }
 
-    public int totalBill(){
-        int returnBill = 50;
+    public double totalBill(){
+        double returnBill = 50;
         if(vehicleList.isEmpty()){
             return 0;
         }
         else {
             for (Vehicle v: vehicleList) {
-                double monthlyExpense = v.getMonthlyExpenses();
-                if(v instanceof Motorbike){
-                    monthlyExpense = monthlyExpense * 0.9 + v.getTopSpeed();
-                } else if (v instanceof Gokart) {
-                    monthlyExpense = monthlyExpense * 1.7 + v.getTopSpeed();
-                }
-                else {
-                    monthlyExpense = monthlyExpense * 1.1 + v.getTopSpeed();
-                }
-                returnBill += monthlyExpense;
+                returnBill =+ v.bill();
             }
             return returnBill;
         }
