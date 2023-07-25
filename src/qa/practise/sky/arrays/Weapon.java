@@ -1,4 +1,4 @@
-package qa.practise.sky;
+package qa.practise.sky.arrays;
 
 public class Weapon {
     private String name;

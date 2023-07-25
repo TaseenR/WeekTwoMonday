@@ -1,7 +1,18 @@
 package qa.practise.sky.oop;
 
 public class Gokart extends Vehicle{
-    public Gokart(int topSpeed, int numberOfWheels, String modelName, int makeYear, int numPreviousOwners) {
-        super(topSpeed, numberOfWheels, modelName, makeYear, numPreviousOwners);
+
+    private int speedLimit;
+    public Gokart(String modelName, int makeYear, int speedLimit,int id) {
+        super(250, 4, modelName, makeYear, 0,350,id);
+        this.speedLimit = speedLimit;
+    }
+
+    public int getSpeedLimit() {
+        return speedLimit;
+    }
+
+    public void setSpeedLimit(int speedLimit) {
+        this.speedLimit = speedLimit;
     }
 }

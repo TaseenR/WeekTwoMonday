@@ -1,6 +1,4 @@
-package qa.practise.sky;
-
-import java.util.* ;
+package qa.practise.sky.arrays;
 
 
 public class Runner
