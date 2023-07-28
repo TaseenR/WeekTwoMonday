@@ -5,6 +5,8 @@ public class Runner {
     public static void main(String[] args) {
         FIleWriter reader = new FIleWriter();
         reader.read();
+        reader.write();
+        reader.read();
     }
 
 }

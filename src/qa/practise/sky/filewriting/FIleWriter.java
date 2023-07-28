@@ -18,4 +18,17 @@ public class FIleWriter {
         }
     }
 
-}
+    public static void write(){
+        try {
+            FileWriter writer = new FileWriter("/Users/trm08/Desktop/SkyCamp/SkyWeekTwoMonday/src/qa/practise/sky/filewriting/poem");
+            writer.write("I wrote this using Java");
+            writer.close();
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    }
+
